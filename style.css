@@ -1,0 +1,249 @@
+.none, .mobile_but{
+    display: none;
+}
+.load_div{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    opacity: 1;
+    animation: load_div 1s 1s ease 1 forwards;
+    z-index: 100;
+}
+@keyframes load_div{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+.content{
+    display: flex;
+    justify-content: start;
+    height: max-content;
+    width: max-content;
+    border-radius: 20px;
+}
+.load_div div{
+    padding: 10px;
+    background: rgb(28, 32, 27);
+}
+.kukumber{
+    color: rgb(255, 255, 255);
+    transform: rotateX(90deg);
+    animation: kukumber 0.5s ease 1 forwards;
+}
+@keyframes kukumber{
+    0%{transform: rotateX(90deg);}
+    100%{transform: rotateX(0deg);}
+}
+.studio{
+    color: chocolate;
+    transform: rotateY(90deg);
+    animation: studio 0.5s 0.5s ease 1 forwards;
+}
+@keyframes studio{
+    0%{transform: rotateY(90deg);}
+    100%{transform: rotateY(0deg);}
+}
+
+body{
+    margin: 0%;
+}
+header, .head-text, .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+header{
+    height: 10vh;
+    background: rgba(128, 27, 27, 1);
+    position: sticky;
+    top: 0%;
+    z-index: 99;
+    box-shadow: 0 0 10px 10px gray;
+}
+.title{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    flex-basis: 35%;
+    background: black;
+    font-size: 130%;
+}
+.head-text{
+    width: max-content;
+    margin: auto;
+}
+.title h1{
+    padding: 5px;
+    flex-basis: 20%;
+}
+.kukumber-head{
+    color: white;
+}
+.studio-head{
+    color: rgb(204, 113, 47);
+}
+.nav-bar{
+    flex-basis: 65%;
+}
+.nav-bar div{
+    flex-basis: 25%;
+}
+.nav-bar h3{
+    width: max-content;
+    margin: auto;
+    padding: 10px;
+    background: white;
+    border: 1px solid black;
+    transition: all 0.1s ease-in-out 0.1s;
+    cursor: pointer;
+}
+.nav-bar h3:hover{
+    background: black;
+    color: white;
+}
+.nav-bar a{
+    text-decoration: none;
+    color: black;
+}
+.mobile_nav_bar{
+    overflow: hidden;
+    text-align: center;
+    width: 100vw;
+    height: 90vh;
+    position: fixed;
+    z-index: 98;
+    background: rgb(34, 33, 33);
+}
+.mobile_nav_bar div h3{
+    width: max-content;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 130%;
+    background: white;
+    border-radius: 20px;
+    transition: all 0.1s ease 0.1s;
+}
+.mobile_nav_bar div h3:hover{
+    border-bottom: none;
+    box-shadow: 0 0 7px 7px gray;
+}
+.mobile_menu_show{
+    animation: mobile_menu_show 0.3s ease 1 forwards;
+    transform: scale(0);
+}
+@keyframes mobile_menu_show{
+    0%{transform: scale(0);}
+    100%{transform: scale(1);}
+}
+.mobile_menu_close{
+    animation: mobile_menu_close 0.3s ease 1 forwards;
+    transform: scale(1);
+}
+@keyframes mobile_menu_close{
+    0%{transform: scale(1);}
+    100%{transform: scale(0);}
+}
+.mobile_nav_bar a{
+    color: black;
+    text-decoration: none;
+}
+.show_menu_but{
+    transform: scale(1);
+    opacity: 1;
+    transform: rotate(0deg);
+    animation: show_menu_but 0.5s ease 1;
+}
+@keyframes show_menu_but{
+    0%{transform: scale(1);transform: rotate(0deg);opacity: 1;}
+    100%{transform: scale(0.1);transform: rotate(90deg);opacity: 0;}
+}
+.close_menu_but{
+    transform: scale(0.1);
+    transform: rotate(90deg);
+    opacity: 0;
+    animation: close_menu_but 0.5s ease 1 forwards;
+}
+@keyframes close_menu_but{
+    0%{transform: scale(0.1);transform: rotate(90deg);opacity: 0;}
+    100%{transform: scale(b1);transform: rotate(0deg);opacity: 1;}
+}
+.about, .slider-block, .contact{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.about-header{
+    flex-basis: 100%;
+    margin-top: 20px;
+}
+.content-about{
+    flex-basis: 100%;
+    width: max-content;
+    margin-left: 50px;
+    padding: 5px;
+    font-size: 130%;
+}
+.slider-header{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+}
+.slider-header h2, .about-header h2, .contact-header h2{
+    width: max-content;
+    margin: auto;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+.slider-container, .contact-header{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+}
+
+
+@media(max-width:1000px){
+    .nav-bar div{
+        display: none;
+    }
+    .mobile_but{
+        display: block;
+        flex-basis: 100%;
+    }
+    .mobile_but h2{
+        width: max-content;
+        margin: auto;
+        padding: 10px;
+        border-radius: 15px;
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+    }
+    header{
+        background: rgb(168, 60, 28);
+    }
+    .nav-bar{
+        flex-basis: 30%;
+    }
+    .title{
+        flex-basis: 70%;
+    }
+    .about-header, .slider-header{
+        font-size: 80%;
+    }
+}
+@media(max-width:400px){
+    .head-text, .load_div{
+        font-size: 80%;
+    }
+    .about-header, .slider-header, .contact-header{
+        font-size: 70%;
+    }
+}
+@media(max-width:300px){
+    .head-text, .load_div, .about-header, .slider-header, .contact-header{
+        font-size: 60%;
+    }
+}
